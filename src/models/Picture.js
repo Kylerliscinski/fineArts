@@ -8,5 +8,6 @@ export class Picture {
     this.width = data.width
     this.imgUrl = data.imgUrls?.regular
     this.description = data.description
+    this.bigImg = data.imgUrls?.raw
   }
 }

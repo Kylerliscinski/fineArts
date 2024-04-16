@@ -5,6 +5,7 @@ import { api } from "./AxiosService.js"
 
 
 class PicturesService {
+
   async drawPictures() {
     const response = await api.get('api/artworks')
     console.log('🎨', response.data);
@@ -23,12 +24,12 @@ class PicturesService {
     AppState.totalPages = response.data.pages
   }
 
-  // async getPictureById(pictureId) {
-  //   AppState.activePicture = null
-  //   const response = await api.get(`api/artworks/${pictureId}`)
-  //   console.log('🎬🖼️', response.data);
-  //   AppState.activePicture = new Picture(response.data)
-  // }
+  async getPictureById(pictureId) {
+    AppState.activePicture = null
+    const response = await api.get(`api/artworks/${pictureId}`)
+    console.log('🎬🖼️', response.data);
+    AppState.activePicture = new Picture(response.data)
+  }
 }
 
 export const picturesService = new PicturesService()

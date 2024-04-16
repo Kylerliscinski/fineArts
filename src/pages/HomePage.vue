@@ -40,7 +40,7 @@ async function drawPictures(){
   
   <h4 class="my-4">The Institute of Fine Arts</h4>
   <section class="row g-1">
-    <PictureTemplate v-for="picture in pictures" :key="picture.id" :picture="picture"/>
+    <PictureTemplate v-for="picture in pictures" :key="picture.id" :picture="picture" class="col-6 col-md-4 pb-2"/>
   </section>
   
   <section class="row my-2">
